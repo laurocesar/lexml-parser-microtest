@@ -13,7 +13,7 @@ public class Test {
         LeisFixture leis = new LeisFixture() { };
         NormaParserService normaParserService = new NormaParserService();
 
-        HierarquiaDocumento hd = normaParserService.parseDocument(leis.conteudoLeiFile("LeiComAlteracao.txt"));
+        HierarquiaDocumento hd = normaParserService.parseDocument(leis.conteudoLeiFile("LeiNumeroLetra.txt"));
         hd.getComponentes().forEach(Test::print);
     }
 
@@ -23,6 +23,7 @@ public class Test {
         System.out.println("descricao: " + node.getElemento().getDescricao());
         System.out.println("des_rotulo: " + node.getElemento().getIdentificaoRotulo());
         System.out.println("texto: " + node.getElemento().getTexto());
+        System.out.println("sigla_tipo: " + node.getElemento().getSiglaTipo());
         System.out.println();
         node.getFilhos().forEach(Test::print);
     }
