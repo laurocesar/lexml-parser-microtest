@@ -13,7 +13,7 @@ public class Test {
         LeisFixture leis = new LeisFixture() { };
         NormaParserService normaParserService = new NormaParserService();
 
-        HierarquiaDocumento hd = normaParserService.parseDocument(leis.conteudoLeiFile("LeiNumeroLetra.txt"));
+        HierarquiaDocumento hd = normaParserService.parseDocument(leis.conteudoLeiFile("PRT834-2016.txt"));
         hd.getComponentes().forEach(Test::print);
     }
 
